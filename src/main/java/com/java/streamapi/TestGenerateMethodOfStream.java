@@ -24,5 +24,8 @@ public class TestGenerateMethodOfStream {
         };
         Stream<String> generate = Stream.generate(supplier);
         generate.forEach(consumer);
+
+        System.out.println("-----------------------------------");
+        Stream.generate(()->"Hello Stream!!").forEach(System.out::println);
     }
 }
